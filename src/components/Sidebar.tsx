@@ -46,7 +46,13 @@ const Sidebar = () => {
     <>
       <Paper
         elevation={0}
-        sx={{ width: 1, borderRadius: 7, p: 3, height: "100vh" }}
+        sx={{
+          width: 1,
+          borderRadius: 7,
+          py: 3,
+          px: { lg: 3, md: 1 },
+          height: "100vh",
+        }}
       >
         <Stack spacing={2} justifyContent="space-between" height={1}>
           <Typography

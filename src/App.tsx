@@ -14,13 +14,19 @@ function App() {
   return (
     <>
       <Router>
-        <Stack spacing={5} p={3} minHeight="100vh" height={1} m="auto">
+        <Stack
+          spacing={{ lg: 5, md: 3 }}
+          p={3}
+          minHeight="100vh"
+          height={1}
+          m="auto"
+        >
           <CssBaseline />
           <Grid2 container spacing={2} py={3}>
-            <Grid2 size={{ md: 2.5 }}>
+            <Grid2 size={{ lg: 3 }} display={{ lg: "flex", xs: "none" }}>
               <Sidebar />
             </Grid2>
-            <Grid2 size={{ md: 9.5 }} px={10}>
+            <Grid2 size={{ lg: 9, xs: 12 }} px={10} pt={3}>
               <Routes>
                 <Route path="*" element={<Dashboard />} />
               </Routes>
