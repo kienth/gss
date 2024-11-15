@@ -84,20 +84,20 @@ export const urls = [
   {
     label: "Janitorial",
     path: "",
-    sublevel: [{ label: "Sub Level 1", path: "/janitorial-1" }],
+    sublevel: [
+      { label: "Request Form", path: "/janitorial/request-form" },
+      { label: "Request List", path: "/janitorial/request-list" },
+    ],
   },
   {
     label: "Security",
     path: "",
-    sublevel: [{ label: "Sub Level 1", path: "/security-1" }],
+    sublevel: [{ label: "Request List", path: "/security/request-list" }],
   },
   {
     label: "Transportation",
     path: "",
-    sublevel: [
-      { label: "Sub Level 1", path: "/transportation-1" },
-      { label: "Sub Level 2", path: "/transportation-2" },
-    ],
+    sublevel: [{ label: "Request List", path: "/transportation/request-list" }],
   },
   {
     label: "Billing",

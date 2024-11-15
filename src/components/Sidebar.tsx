@@ -51,7 +51,7 @@ const Sidebar = () => {
           borderRadius: 7,
           py: 3,
           px: { lg: 3, md: 1 },
-          height: "100vh",
+          height: "91vh",
         }}
       >
         <Stack spacing={2} justifyContent="space-between" height={1}>

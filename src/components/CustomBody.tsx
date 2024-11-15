@@ -10,13 +10,16 @@ interface ICustomBody {
 const CustomBody = (props: ICustomBody) => {
   return (
     <Stack spacing={2}>
-      <Stack direction="row" justifyContent="space-between">
+      <Stack
+        direction={{ sm: "row", xs: "column" }}
+        justifyContent="space-between"
+        spacing={2}
+      >
         <Stack spacing={2}>
           <CustomSkeleton width={300} height={30} />
-
           <CustomSkeleton width={200} height={20} />
         </Stack>
-        <Stack direction="row" spacing={2}>
+        <Stack direction="row" spacing={2} justifyContent="end">
           <Box display={{ lg: "block", xs: "none" }}>
             <CustomSkeleton width={250} height={40} />
           </Box>
