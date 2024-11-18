@@ -15,7 +15,6 @@ import {
 } from "@mui/material";
 import CustomLoading from "./CustomLoading";
 import { ArrowDropDown, ArrowDropUp } from "@mui/icons-material";
-import { primaryColor } from "../utils";
 import CustomSkeleton from "./Skeleton";
 
 interface ICustomTable {
@@ -50,7 +49,7 @@ const CustomTable = (props: ICustomTable) => {
         <>
           <TableContainer component={Paper} elevation={0}>
             <Table sx={{ width: 1 }}>
-              <TableHead sx={{ bgcolor: primaryColor.light }}>
+              <TableHead>
                 <TableRow>
                   {props.column.map((item, index) => (
                     <TableCell
@@ -89,12 +88,7 @@ const CustomTable = (props: ICustomTable) => {
                         }
                         spacing={0.5}
                       >
-                        <Typography
-                          variant="body1"
-                          fontWeight={600}
-                          noWrap
-                          color="#FFF"
-                        >
+                        <Typography variant="body1" fontWeight={600} noWrap>
                           {item.label}
                         </Typography>
                         {props.pagination &&

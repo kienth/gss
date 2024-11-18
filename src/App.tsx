@@ -16,6 +16,7 @@ import Test from "./pages/Test";
 import RequestForm from "./pages/RequestForm";
 import ConferenceRoom from "./pages/RequestForm/forms/ConferenceRoom";
 import JanitorialService from "./pages/RequestForm/forms/JanitorialService";
+import EntryPremises from "./pages/RequestForm/forms/EntryPremises";
 
 function App() {
   const classes = MakeStyle();
@@ -49,6 +50,10 @@ function App() {
                 <Route
                   path="/request-form/conference-room"
                   element={<ConferenceRoom />}
+                />
+                <Route
+                  path="/request-form/entry-premises"
+                  element={<EntryPremises />}
                 />
                 <Route
                   path="/janitorial/request-list"
