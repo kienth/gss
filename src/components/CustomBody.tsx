@@ -11,12 +11,7 @@ import {
 } from "@mui/material";
 
 import CustomSkeleton from "./Skeleton";
-import {
-  ArrowBackIosNew,
-  Home,
-  Notifications,
-  Search,
-} from "@mui/icons-material";
+import { ArrowBackIosNew, Notifications, Search } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 import { MakeStyle } from "../utils";
 
@@ -24,7 +19,7 @@ interface ICustomBody {
   children: ReactNode;
   isLoading: boolean;
   header: string;
-  breadcrumbs: { label: string; url: string }[];
+  breadcrumbs?: { label: string; url: string }[];
 }
 
 const CustomBody = (props: ICustomBody) => {
@@ -44,7 +39,11 @@ const CustomBody = (props: ICustomBody) => {
             <IconButton
               sx={{ display: { md: "none", xs: "flex" } }}
               onClick={() =>
-                navigate(props.breadcrumbs[props.breadcrumbs.length - 1].url)
+                navigate(
+                  props.breadcrumbs
+                    ? props.breadcrumbs[props.breadcrumbs.length - 1].url
+                    : ""
+                )
               }
             >
               <ArrowBackIosNew color="primary" />
@@ -71,7 +70,7 @@ const CustomBody = (props: ICustomBody) => {
                   divider={<Typography variant="caption">•</Typography>}
                   display={{ lg: "flex", xs: "none" }}
                 >
-                  {props.breadcrumbs.map((item) => {
+                  {props.breadcrumbs?.map((item) => {
                     return (
                       <Typography
                         variant="caption"
@@ -88,41 +87,6 @@ const CustomBody = (props: ICustomBody) => {
               </Stack>
             )}
           </Stack>
-          {/* {props.isLoading ? (
-            <CustomSkeleton width={200} height={20} />
-          ) : (
-            <Stack
-              direction="row"
-              alignItems="center"
-              spacing={3}
-              divider={<Divider flexItem orientation="vertical" />}
-              display={{ md: "flex", xs: "none" }}
-            >
-              <IconButton onClick={() => navigate("/")}>
-                <Home />
-              </IconButton>
-              <Stack
-                direction="row"
-                alignItems="center"
-                spacing={2}
-                divider={<Typography variant="caption">•</Typography>}
-              >
-                {props.breadcrumbs.map((item) => {
-                  return (
-                    <Typography
-                      variant="caption"
-                      sx={{
-                        cursor: "pointer",
-                      }}
-                      onClick={() => navigate(item.url)}
-                    >
-                      {item.label}
-                    </Typography>
-                  );
-                })}
-              </Stack>
-            </Stack>
-          )} */}
         </Stack>
         <Stack
           direction="row"

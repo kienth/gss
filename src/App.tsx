@@ -6,17 +6,19 @@ import {
 } from "react-router-dom";
 import { CssBaseline, Grid2, Stack } from "@mui/material";
 
-import Dashboard from "./pages/Dashboard";
-import "./App.css";
-import Sidebar from "./components/Sidebar";
 import { MakeStyle } from "./utils";
-import RequestList from "./pages/Janitorial/RequestList";
+import Dashboard from "./pages/Dashboard";
+import Sidebar from "./components/Sidebar";
 import Billing from "./pages/Billing";
 import Test from "./pages/Test";
 import RequestForm from "./pages/RequestForm";
 import ConferenceRoom from "./pages/RequestForm/forms/ConferenceRoom";
 import JanitorialService from "./pages/RequestForm/forms/JanitorialService";
 import EntryPremises from "./pages/RequestForm/forms/EntryPremises";
+import Janitorial from "./pages/Janitorial";
+import Security from "./pages/Security";
+import Transportation from "./pages/Transportation";
+import "./App.css";
 
 function App() {
   const classes = MakeStyle();
@@ -57,15 +59,12 @@ function App() {
                 />
                 <Route
                   path="/janitorial/request-list"
-                  element={<RequestList />}
+                  element={<Janitorial />}
                 />
-                <Route
-                  path="/security/request-list"
-                  element={<RequestList />}
-                />
+                <Route path="/security/request-list" element={<Security />} />
                 <Route
                   path="/transportation/request-list"
-                  element={<RequestList />}
+                  element={<Transportation />}
                 />
                 <Route path="/billing" element={<Billing />} />
 
