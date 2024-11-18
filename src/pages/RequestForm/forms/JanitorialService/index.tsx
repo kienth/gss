@@ -1,9 +1,14 @@
 import { Divider, Grid2, Stack, TextField, Typography } from "@mui/material";
-import CustomBody from "../../../components/CustomBody";
+
+import CustomBody from "../../../../components/CustomBody";
 
 const RequestForm = () => {
   return (
-    <CustomBody>
+    <CustomBody
+      isLoading={false}
+      header="Request For Janitorial Services"
+      breadcrumbs={[{ label: "Request Form", url: "/request-form" }]}
+    >
       <Stack spacing={2}>
         <Stack
           direction="row"
@@ -113,12 +118,9 @@ const RequestForm = () => {
           <Grid2 size={{ md: 6, xs: 12 }}>
             <Typography variant="body1">Approved by:</Typography>
             <br />
-            <Typography variant="body2">BELLENE LARENA-AHMAD</Typography>
+            <Typography variant="subtitle2">BELLENE LARENA-AHMAD</Typography>
             <Typography variant="body2">
-              Director, Administrative Service/
-            </Typography>
-            <Typography variant="body2">
-              Administrative Division Chief
+              Director, Administrative Service / Administrative Division Chief
             </Typography>
           </Grid2>
           <Grid2 size={{ md: 6, xs: 12 }}>

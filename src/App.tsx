@@ -12,8 +12,10 @@ import Sidebar from "./components/Sidebar";
 import { MakeStyle } from "./utils";
 import RequestList from "./pages/Janitorial/RequestList";
 import Billing from "./pages/Billing";
-import RequestForm from "./pages/Janitorial/RequestForm";
 import Test from "./pages/Test";
+import RequestForm from "./pages/RequestForm";
+import ConferenceRoom from "./pages/RequestForm/forms/ConferenceRoom";
+import JanitorialService from "./pages/RequestForm/forms/JanitorialService";
 
 function App() {
   const classes = MakeStyle();
@@ -39,9 +41,14 @@ function App() {
             >
               <Routes>
                 <Route path="*" element={<Dashboard />} />
+                <Route path="/request-form" element={<RequestForm />} />
                 <Route
-                  path="/janitorial/request-form"
-                  element={<RequestForm />}
+                  path="/request-form/janitorial"
+                  element={<JanitorialService />}
+                />
+                <Route
+                  path="/request-form/conference-room"
+                  element={<ConferenceRoom />}
                 />
                 <Route
                   path="/janitorial/request-list"
@@ -56,6 +63,7 @@ function App() {
                   element={<RequestList />}
                 />
                 <Route path="/billing" element={<Billing />} />
+
                 <Route path="/test" element={<Test />} />
               </Routes>
 

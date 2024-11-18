@@ -3,6 +3,8 @@ import { createTheme, responsiveFontSizes, ThemeProvider } from "@mui/material";
 
 import App from "./App.tsx";
 import "./index.css";
+import { Provider } from "react-redux";
+import { store } from "./store.ts";
 
 let theme = createTheme({
   typography: {
@@ -64,7 +66,9 @@ let theme = createTheme({
 theme = responsiveFontSizes(theme);
 
 createRoot(document.getElementById("root")!).render(
-  <ThemeProvider theme={theme}>
-    <App />
-  </ThemeProvider>
+  <Provider store={store}>
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
+  </Provider>
 );

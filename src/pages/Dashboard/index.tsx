@@ -4,7 +4,7 @@ import CustomSkeleton from "../../components/Skeleton";
 
 const Dashboard = () => {
   return (
-    <CustomBody>
+    <CustomBody isLoading={false} header="Dashboard" breadcrumbs={[]}>
       <Grid2 container spacing={2}>
         <Grid2 size={{ md: 6, xs: 12 }}>
           <Grid2 container spacing={2}>

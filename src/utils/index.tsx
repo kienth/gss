@@ -82,12 +82,14 @@ export const formatNumber = (data: number) => {
 
 export const urls = [
   {
+    label: "Request Form",
+    path: "/request-form",
+    sublevel: [],
+  },
+  {
     label: "Janitorial",
     path: "",
-    sublevel: [
-      { label: "Request Form", path: "/janitorial/request-form" },
-      { label: "Request List", path: "/janitorial/request-list" },
-    ],
+    sublevel: [{ label: "Request List", path: "/janitorial/request-list" }],
   },
   {
     label: "Security",
