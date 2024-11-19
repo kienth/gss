@@ -19,6 +19,7 @@ import Janitorial from "./pages/Janitorial";
 import Security from "./pages/Security";
 import Transportation from "./pages/Transportation";
 import "./App.css";
+import EmployeeVehicleEntryPass from "./pages/RequestForm/forms/EmployeeVehicleEntryPass";
 
 function App() {
   const classes = MakeStyle();
@@ -56,6 +57,10 @@ function App() {
                 <Route
                   path="/request-form/entry-premises"
                   element={<EntryPremises />}
+                />
+                <Route
+                  path="/request-form/employee-vehicle-entry-premises"
+                  element={<EmployeeVehicleEntryPass />}
                 />
                 <Route
                   path="/janitorial/request-list"

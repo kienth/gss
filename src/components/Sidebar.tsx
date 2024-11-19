@@ -55,15 +55,16 @@ const Sidebar = () => {
         }}
       >
         <Stack spacing={2} justifyContent="space-between" height={1}>
-          <Typography
-            variant="h5"
-            fontWeight={800}
-            textAlign="center"
+          <Stack
+            alignItems="center"
             onClick={() => navigate("/")}
             sx={{ cursor: "pointer" }}
           >
-            General Service System
-          </Typography>
+            <Typography variant="h5" fontWeight={800}>
+              General Services Section
+            </Typography>
+            <Typography variant="subtitle2">Field Office X </Typography>
+          </Stack>
           <Box px={1} py={5}>
             <Stack direction="column" spacing={0.5} px={2} width={1}>
               {urls.map((item, index) => {

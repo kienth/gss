@@ -6,7 +6,7 @@ const RequestForm = () => {
   return (
     <CustomBody
       isLoading={false}
-      header="Request For Janitorial Services"
+      header="Janitorial Services"
       breadcrumbs={[{ label: "Request Form", url: "/request-form" }]}
     >
       <Stack spacing={2}>

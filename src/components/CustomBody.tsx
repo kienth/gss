@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import {
+  Badge,
   Box,
-  Button,
   Divider,
   IconButton,
   InputBase,
@@ -112,11 +112,7 @@ const CustomBody = (props: ICustomBody) => {
                   placeholder="General Search"
                   inputProps={{ "aria-label": "search google maps" }}
                 />
-                <IconButton
-                  type="button"
-                  sx={{ p: "10px" }}
-                  aria-label="search"
-                >
+                <IconButton type="button">
                   <Search />
                 </IconButton>
               </Paper>
@@ -125,12 +121,11 @@ const CustomBody = (props: ICustomBody) => {
           {props.isLoading ? (
             <CustomSkeleton width={40} height={40} />
           ) : (
-            <Button
-              variant="outlined"
-              sx={{ height: 50, display: { md: "block", xs: "none" } }}
-            >
-              <Notifications />
-            </Button>
+            <IconButton aria-label="cart">
+              <Badge badgeContent={4} color="primary">
+                <Notifications />
+              </Badge>
+            </IconButton>
           )}
         </Stack>
       </Stack>
