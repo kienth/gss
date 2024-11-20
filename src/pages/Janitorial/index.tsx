@@ -86,6 +86,7 @@ const formData = [
 ];
 
 const column = [
+  { label: "Category", align: "center" },
   { label: "Requesting Office" },
   { label: "Purpose" },
   { label: "Status", align: "center" },
@@ -143,6 +144,7 @@ const Janitorial = () => {
                     timeNeeded: string;
                     location: string;
                   }) => [
+                    "Janitorial Service",
                     item.requestOffice,
                     item.purpose,
                     <Chip label="Pending" variant="outlined" color="warning" />,

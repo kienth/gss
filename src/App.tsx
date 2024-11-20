@@ -10,7 +10,6 @@ import { MakeStyle } from "./utils";
 import Dashboard from "./pages/Dashboard";
 import Sidebar from "./components/Sidebar";
 import Billing from "./pages/Billing";
-import Test from "./pages/Test";
 import RequestForm from "./pages/RequestForm";
 import ConferenceRoom from "./pages/RequestForm/forms/ConferenceRoom";
 import JanitorialService from "./pages/RequestForm/forms/JanitorialService";
@@ -72,8 +71,6 @@ function App() {
                   element={<Transportation />}
                 />
                 <Route path="/billing" element={<Billing />} />
-
-                <Route path="/test" element={<Test />} />
               </Routes>
 
               <Outlet />
